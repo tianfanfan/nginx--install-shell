@@ -1,5 +1,5 @@
 # nginx--install-shell
-CentOS一键安装Nginx
+CentOS 一键安装 Nginx
 
 ### 环境要求
 * CentOS 6/7
