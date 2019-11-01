@@ -122,6 +122,10 @@ function CompileInstall(){
 	wget http://soft.xiaoz.org/nginx/ngx_brotli.tar.gz
 	tar -zxvf ngx_brotli.tar.gz
 
+	#下载 headers-more
+	wget https://github.com/openresty/headers-more-nginx-module/archive/v0.33.tar.gz
+	tar -zxvf v0.33.tar.gz
+
 	#安装Nginx
 	cd /usr/local
 	wget https://wget.ovh/nginx/xcdn-${nginx_version}.tar.gz
@@ -142,6 +146,7 @@ function CompileInstall(){
 	--add-module=../ngx_http_substitutions_filter_module \
 	--add-module=../ngx_cache_purge \
 	--add-module=../ngx_brotli
+	--add-module=../headers-more-nginx-module-0.33
 	make -j4 && make -j4 install
 
 	#一点点清理工作
