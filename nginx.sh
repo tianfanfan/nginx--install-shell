@@ -145,7 +145,7 @@ function CompileInstall(){
 	--with-openssl=../openssl-${openssl_version} \
 	--add-module=../ngx_http_substitutions_filter_module \
 	--add-module=../ngx_cache_purge \
-	--add-module=../ngx_brotli
+	--add-module=../ngx_brotli \
 	--add-module=../headers-more-nginx-module-0.33
 	make -j4 && make -j4 install
 
